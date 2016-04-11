@@ -28,7 +28,7 @@ var login = function(email, password){
            });
 };
 
-// (3) ログアウトの処理
+// (4) ログアウトの処理
 var logout = function(){
   ncmb.User.logout()
            .then(function(){
@@ -39,10 +39,10 @@ var logout = function(){
            });
 };
 
-// (4) クラウド上で歩数を管理する「Steps」クラスを定義する
+// (5) クラウド上で歩数を管理する「Steps」クラスを定義する
 var Steps = ncmb.DataStore('Steps');
 
-// (5) アプリ内に保持しいている未同期の歩数データをクラウドと同期させる処理
+// (6) アプリ内に保持しいている未同期の歩数データをクラウドと同期させる処理
 var syncCloud = function(data, waitingList){
   // 今から保存する歩数データへのアクセス権限を自分自身だけに限定するためのACLを作る
   var currentUser = ncmb.User.getCurrentUser();
@@ -70,7 +70,7 @@ var syncCloud = function(data, waitingList){
     });
 };
 
-// (6) ログイン完了時の処理
+// (7) ログイン完了時の処理
 var loginComplete = function(today){
   // ログイン完了後に自身の今日の歩数をクラウドから取得してPedometerに設定
   Steps.equalTo('date', today)
