@@ -152,6 +152,7 @@ Monacaとニフティクラウドmobile backendを使用した歩数計アプリ
    ```html
    <script src="js/app.completed.js"></script>
    ```
+
 1. [mobile backend](https://console.mb.cloud.nifty.com/)で作成したアプリのアプリケーションキーをコピーして、Monaca IDE上のwww/js/app.completed.jsの22行目にある「YOUR_APPLICATION_KEY」を置き換える
 1. [mobile backend](https://console.mb.cloud.nifty.com/)で作成したアプリのクライアントキーをコピーして、Monaca IDE上のwww/js/app.completed.jsの23行目にある「YOUR_CLIENT_KEY」を置き換える
 1. [Monacaデバッガー](https://ja.monaca.io/debugger.html)で動作確認をする
