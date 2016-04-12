@@ -37,7 +37,7 @@ input[type=email], input[type=password] {
 }
 
 .pedometerContainer > span {
-  padding-top: 28px;
+  padding-top: 50px;
   font-size: 5em;
-  height: 80px;
+  height: 105px;
 }
