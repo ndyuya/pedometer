@@ -103,7 +103,10 @@ var Pedometer = {
   },
   // 歩数計リセット
   reset: function(){
-    this.setSteps({count:0, date:Pedometer.getToday()});
+    var today = this.getToday();
+    var todaySteps = today in this.steps ? this.steps[today] : {count: 0, date: today, synced: false};
+    todaySteps.count = 0;
+    this.setSteps(todaySteps);
   },
   // 歩数のインクリメント
   incrementSteps: function(){
